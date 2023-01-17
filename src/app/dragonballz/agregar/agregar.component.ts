@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../interfaces/dragonballz.interface';
 
 @Component({
@@ -7,23 +7,24 @@ import { Personaje } from '../interfaces/dragonballz.interface';
 })
 export class AgregarComponent {
 
-  @Input() listaPersonajes: Personaje[] = [];
-
   @Input() nuevo: Personaje = {
     nombre: '',
     poder: 0
   };
 
+  @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
+
   agregar(): void {
     if (this.nuevo.nombre.trim().length === 0 || this.nuevo.poder <= 0) {
       return;
     }
-    this.listaPersonajes.push(this.nuevo);
-    console.log(this.nuevo)
+
+    this.onNuevoPersonaje.emit( this.nuevo )
+
     this.nuevo = {
       nombre: '',
       poder: 0
-    }
+    };
   }
   
 }

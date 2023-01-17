@@ -27,19 +27,8 @@ export class MainPageComponent {
     poder: 0
   };
 
-  agregar(): void {
-    if (this.nuevo.nombre.trim().length === 0 || this.nuevo.poder <= 0) {
-      return;
-    }
-    this.listaPersonajes.push(this.nuevo);
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
-  }
-
-  cambiarNombre(e: any): void {
-    this.nuevo.nombre = e.target.value;
+  agregarNuevoPersonage(e) {
+    console.log('cu')
   }
 
 }
