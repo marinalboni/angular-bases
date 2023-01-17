@@ -7,7 +7,6 @@ import { Personaje } from '../interfaces/dragonballz.interface';
 })
 export class PersonajesComponent {
 
-  @Input()
-  listaPersonajes: Personaje[] = [];
+  @Input() listaPersonajes: Personaje[] = [];
 
 }
