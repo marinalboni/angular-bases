@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dragonballz.interface';
 import { DragonBallZService } from '../services/dragonballz.service';
 
@@ -8,7 +8,7 @@ import { DragonBallZService } from '../services/dragonballz.service';
 })
 export class AgregarComponent {
 
-  @Input() nuevo: Personaje = {
+  nuevo: Personaje = {
     nombre: '',
     poder: 0
   };

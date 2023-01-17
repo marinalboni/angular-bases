@@ -26,7 +26,7 @@ export class DragonBallZService {
 
     constructor() {}
 
-    agregarPersonaje( personaje: Personaje) {
+    agregarPersonaje( personaje: Personaje): void {
         this._listaPersonajes.push( personaje )
     }
 

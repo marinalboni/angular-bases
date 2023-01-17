@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Personaje } from '../interfaces/dragonballz.interface';
+import { Component } from '@angular/core';
 import { DragonBallZService } from '../services/dragonballz.service';
 
 @Component({
